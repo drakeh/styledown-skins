@@ -14,7 +14,8 @@
     "bower_components",
     "test",
     "tests",
-    "src"
+    "src",
+    "Gruntfile.js"
   ],
   "devDependencies": {
     "jquery.tocify.js": "~1.9.0"
