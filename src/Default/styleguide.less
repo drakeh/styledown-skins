@@ -1,0 +1,337 @@
+// styleguide.less
+//
+// The styles here need to be limited and very targeted as they will have to
+// coexist with the source styles. All classes are prefixed with sg-* to
+// prevent these styles from leaking out and the !important declaration, while
+// usually a bad idea, is used frequently here to prevent source styles from
+// leaking in.
+
+
+
+// Variables
+// ----------------------------------------------------------------------------
+
+// Base sizes
+@font-size: 14px;
+@line-height: @font-size * 1.4;
+
+// Spacing units
+@spacing-unit     : @line-height;
+@spacing-unit--sm : round(@spacing-unit/2);
+@spacing-unit--xs : round(@spacing-unit/4);
+@spacing-unit--lg : round(@spacing-unit*2);
+
+// Heading sizes
+@font-size--h1: @font-size * 2.50;
+@font-size--h2: @font-size * 2.00;
+@font-size--h3: @font-size * 1.60;
+@font-size--h4: @font-size * 1.20;
+@font-size--h5: @font-size;
+@font-size--h6: @font-size * 0.85;
+
+// Font families
+@font-family: "Helvetica Neue", Arial, sans-serif;
+@font-family-mono: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono",
+                   Monaco, Consolas, monospace;
+
+// Colors
+@light-grey   : #f8f8f8;
+@border-color : #ddd;
+@text-color   : #444;
+@link-color   : #4183c4;
+
+// Breakpoints
+@screen-width--sm: 768px;
+
+
+
+// Base
+// ----------------------------------------------------------------------------
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #fff !important;
+}
+
+// Reset for style guide elements
+.sg,
+[class^="sg-"],
+[class~=" sg-"] {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+}
+
+
+
+// Layout
+// ----------------------------------------------------------------------------
+
+html,body {
+    height: 100% !important;
+}
+
+@sg-menu-width: 250px;
+
+.sg-menu {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: auto;
+    z-index: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: @spacing-unit (@spacing-unit * 1.5) !important;
+    width: @sg-menu-width !important;
+    height: 100% !important;
+    display: none;
+
+    @media (min-width: @screen-width--sm) {
+        display: block;
+    }
+}
+
+.sg-content {
+    padding:  @spacing-unit !important;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: @screen-width--sm) {
+        margin-left: @sg-menu-width !important;
+        padding-left: @spacing-unit--lg !important;
+        padding-right: @spacing-unit--lg !important;
+    }
+}
+
+
+
+// Spacing
+// ----------------------------------------------------------------------------
+
+h1,h2,h3,h4,h5,h6,p {
+    &.sg { margin-bottom: @spacing-unit--sm !important; }
+}
+
+// Top-level section headings and main title
+.sg-section > h2.sg,
+.sg-title {
+    margin-bottom: @spacing-unit !important;
+}
+
+.sg-section {
+    margin-bottom: @spacing-unit--lg !important;
+}
+
+.sg-example {
+    margin-bottom: @spacing-unit !important;
+}
+
+
+
+// Typography
+// ----------------------------------------------------------------------------
+
+// Reset for all style guide text elements
+h1.sg,
+h2.sg,
+h3.sg,
+h4.sg,
+h5.sg,
+h6.sg,
+p.sg,
+ol.sg,
+ul.sg
+.sg-title,
+.sg-text,
+.sg-menu,
+.sg-code-toggle,
+.sg-copyright  {
+    font-size: @font-size !important;
+    line-height: unit(@line-height/@font-size) !important;
+    font-family: @font-family !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    color: @text-color !important;
+    text-transform: none !important;
+}
+
+// Bold headings
+h1,h2,h3,h4,h5,h6 {
+    &.sg { font-weight: bold !important; }
+}
+
+// Heading sizes
+h1.sg { font-size: @font-size--h1 !important; }
+h2.sg { font-size: @font-size--h2 !important; }
+h3.sg { font-size: @font-size--h3 !important; }
+h4.sg { font-size: @font-size--h4 !important; }
+h5.sg { font-size: @font-size--h5 !important; }
+h6.sg { font-size: @font-size--h6 !important; }
+
+// Top-level section headings
+.sg-section > h2.sg {
+    padding-bottom: .1em !important;
+    border-bottom: 1px solid #eee!important;
+    color: #666!important;
+}
+
+// Main style guide title
+.sg-title {
+    font-size: round(@font-size * 1.2) !important;
+    font-weight: bold !important;
+    color: #666 !important;
+}
+
+.sg-copyright {
+    text-align: center;
+    font-size: round(@font-size * 0.8) !important;
+    color: #666 !important;
+}
+
+// Links
+a.sg { color: @link-color !important; }
+
+// Emphasis
+strong.sg { font-weight: bold !important; }
+em.sg { font-style:  italic !important; }
+
+// Lists
+ol.sg,
+ul.sg {
+    padding-left: 3em !important;
+}
+
+// Inline code
+code.sg {
+    display: inline-block !important;
+    padding: 2px 6px !important;
+    border: solid 1px lighten(@border-color, 5%) !important;
+    border-radius: 2px;
+    background-color: @light-grey !important;
+    white-space: nowrap !important;
+    font-family: @font-family-mono !important;
+    font-size: 12px !important;
+}
+
+// Code blocks
+.sg-code {
+    font-family: @font-family-mono !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+
+    // Syntax highlighting
+    .hljs-tag,
+    .hljs-title {
+        color: #2f6f9f !important;
+    }
+    .hljs-attribute {
+        color: #4f9fcf !important;
+    }
+    .hljs-string,
+    .hljs-number,
+    .hljs-value {
+        color: #d44950 !important;
+    }
+    .hljs-comment {
+        color: #999988 !important;
+    }
+}
+
+
+
+// Objects
+// ----------------------------------------------------------------------------
+
+.sg-menu {
+    border-right: solid 1px @border-color !important;
+    background-color: @light-grey !important;
+}
+
+// Table of contents nav - rendered by the jquery.tocify plugin
+ .tocify {
+    ul {
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style-type: none !important;
+    }
+
+    li {
+        margin: 0 !important;
+        padding: @spacing-unit--xs 0 !important;
+    }
+
+    a {
+        font-size: @font-size !important;
+        color: @link-color !important;
+        text-decoration: none !important;
+        &:hover {
+            text-decoration: underline !important;
+        }
+    }
+
+    // Selected nav item
+    .tocify-focus > a { font-weight: bold; }
+
+    // Make top-level nav items slightly larger
+    > ul > li > a { font-size: round(@font-size * 1.1) !important; }
+
+    // Indent secondary-level nav items
+    ul ul { padding-left: @spacing-unit !important; }
+
+    // Hide secondary menu items by default.
+    .tocify-subheader { display: none; }
+}
+
+// Example block with rendered HTML and paired source code
+.sg-example {
+    border: 1px solid @border-color !important;
+    border-radius: 3px;
+}
+
+// Example canvas where HTML examples are rendered
+.sg-canvas {
+    position: relative;
+    padding: @spacing-unit--lg @spacing-unit !important;
+
+    @media (min-width: @screen-width--sm) {
+        padding-left: @spacing-unit--lg !important;
+        padding-right: @spacing-unit--lg !important;
+    }
+
+    overflow-x: auto;
+
+    // Remove excess margins from the first and last children
+    // of the example block
+    > :first-child { margin-top    : 0 !important; }
+    > :last-child  { margin-bottom : 0 !important; }
+}
+
+// Example source code block
+.sg-code {
+    padding: @spacing-unit !important;
+    border-top: solid 1px lighten(@border-color, 5%) !important;
+    background-color: @light-grey !important;
+}
+
+.sg-code-toggle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 90px;
+    padding: 5px 0 !important;
+    border-color: @border-color !important;
+    border-style: solid !important;
+    border-width: 1px 0 0 1px !important;
+    border-top-left-radius: 3px;
+    text-align: center;
+    font-size: 11px !important;
+    color: #777 !important;
+    outline: none !important;
+
+    &:hover {
+        background-color: @light-grey !important;
+    }
+}
