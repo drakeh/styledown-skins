@@ -1,4 +1,2 @@
-styledown-skin
-==============
-
-Presentation layer for styledown style guides
+# styledown-skins
+Skins for Styledown style guides
