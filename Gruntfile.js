@@ -1,4 +1,3 @@
-
 module.exports = function (grunt) {
 
     grunt.initConfig({
@@ -57,6 +56,32 @@ module.exports = function (grunt) {
                     ext: ".min.js"
                 }]
             }
+        },
+
+        styledown: {
+            default: {
+                files: {
+                    "examples/Default/index.html": ["examples/Default/styleguide.md"]
+                },
+                options: {
+                    title: "styledown-skins | Default",
+                    css: "http://yui.yahooapis.com/pure/0.5.0/pure-min.css",
+                    sg_css: "../../dist/Default/styleguide.min.css",
+                    sg_js: [
+                        "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
+                        "../../dist/Default/styleguide.min.js"
+                    ],
+                    body:
+                        "<div class=sg-menu>" +
+                            "<div class=sg-title>Example Style Guide</div>" +
+                            "<nav class=sg-toc></nav>" +
+                        "</div>" +
+                        "<div class=sg-content>" +
+                            "<div sg-content></div>" +
+                            "<div class=sg-copyright>&copy; Example Copyright</div>" +
+                        "</div>"
+                }
+            }
         }
 
     });
@@ -66,7 +91,8 @@ module.exports = function (grunt) {
         "autoprefixer",
         "cssmin",
         "concat",
-        "uglify"
+        "uglify",
+        "styledown"
     ]);
 
     // load all grunt tasks matching the `grunt-*` pattern.

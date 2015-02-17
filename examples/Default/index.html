@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="sg">
+
+<head>
+  <meta charset="utf-8">
+  <title>styledown-skins | Default</title>
+  <link rel="stylesheet" href="../../dist/Default/styleguide.min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+</head>
+
+<body class="sg">
+  <div class="sg-menu">
+    <div class="sg-title">Example Style Guide</div>
+    <nav class="sg-toc"></nav>
+  </div>
+  <div class="sg-content">
+    <div>
+      <section class="sg-section sg-section-introduction">
+        <h2 id="introduction" class="sg">Introduction</h2>
+        <p class="sg">This is an example styleguide demonstrating the Default skin from
+          <a href="https://github.com/drakeh/styledown-skins" class="sg">styledown-skins</a>. The components and associated documentation are borrowed from the
+          <a href="http://purecss.io/buttons/" class="sg">Pure Framework</a>.</p>
+      </section>
+
+      <section class="sg-section sg-section-buttons">
+        <h2 id="buttons" class="sg">Buttons</h2>
+        <section class="sg-block sg-section-default-buttons">
+          <div class="sg-text">
+            <h3 id="default-buttons" class="sg">Default Buttons</h3>
+            <p class="sg">To create a Pure Button, add the
+              <code class="sg">pure-button</code>classname to any
+              <code class="sg">&lt;a&gt;</code>or
+              <code class="sg">&lt;button&gt;</code>element.</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <a href="#" class="pure-button">A Pure Button</a>
+              <button class="pure-button">A Pure Button</button>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pure-button&quot;</span>&gt;</span>A Pure Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pure-button&quot;</span>&gt;</span>A Pure Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+          </div>
+        </section>
+        <section class="sg-block sg-section-disabled-buttons">
+          <div class="sg-text">
+            <h3 id="disabled-buttons" class="sg">Disabled Buttons</h3>
+            <p class="sg">To mark a button as disabled, add the
+              <code class="sg">pure-button-disabled</code>classname alongside
+              <code class="sg">pure-button</code>.</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <a href="#" class="pure-button pure-button-disabled">A Disabled Button</a>
+              <button class="pure-button pure-button-disabled">A Disabled Button</button>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pure-button pure-button-disabled&quot;</span>&gt;</span>A Disabled Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pure-button pure-button-disabled&quot;</span>&gt;</span>A Disabled Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+          </div>
+        </section>
+        <section class="sg-block sg-section-primary-buttons">
+          <div class="sg-text">
+            <h3 id="primary-buttons" class="sg">Primary Buttons</h3>
+            <p class="sg">To indicate that a button represents a primary action, add the
+              <code class="sg">pure-button-primary</code>classname alongside
+              <code class="sg">pure-button</code>.</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <a href="#" class="pure-button pure-button-primary">A Primary Button</a>
+              <button class="pure-button pure-button-primary">A Primary Button</button>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pure-button pure-button-primary&quot;</span>&gt;</span>A Primary Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pure-button pure-button-primary&quot;</span>&gt;</span>A Primary Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+          </div>
+        </section>
+      </section>
+
+      <section class="sg-section sg-section-tables">
+        <h2 id="tables" class="sg">Tables</h2>
+        <section class="sg-block sg-section-default-table">
+          <div class="sg-text">
+            <h3 id="default-table" class="sg">Default Table</h3>
+            <p class="sg">To style an HTML table, add the
+              <code class="sg">pure-table</code>classname. This class adds padding and borders to table elements, and emphasizes the header.</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <table class="pure-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Honda</td>
+                    <td>Accord</td>
+                    <td>2009</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Toyota</td>
+                    <td>Camry</td>
+                    <td>2012</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Hyundai</td>
+                    <td>Elantra</td>
+                    <td>2010</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pure-table&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>#<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Make<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Model<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Year<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Honda<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Accord<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>2009<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Toyota<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Camry<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>2012<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Hyundai<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Elantra<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>2010<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+          </div>
+        </section>
+      </section>
+
+    </div>
+    <div class="sg-copyright">&#xA9; Example Copyright</div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>,
+  <script src="../../dist/Default/styleguide.min.js"></script>
+</body>
+
+</html>

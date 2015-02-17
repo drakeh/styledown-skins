@@ -19,6 +19,7 @@
     "grunt-contrib-cssmin": "^0.12.1",
     "grunt-contrib-less": "^1.0.0",
     "grunt-contrib-uglify": "^0.7.0",
+    "grunt-styledown": "0.0.2",
     "load-grunt-tasks": "^3.1.0"
   }
 }
