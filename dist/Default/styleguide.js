@@ -1837,10 +1837,7 @@ $.each( { show: "fadeIn", hide: "fadeOut" }, function( method, defaultEffect ) {
         // Hide code blocks an add a toggle button to each example that will
         // show/hide the code block for that example.
         $(".sg-code").hide();
-        $(".sg-canvas").each(function() {
-            var $toggle = $("<button class=sg-code-toggle>Show Markup</button>");
-            $(this).append($toggle);
-        });
+        $(".sg-canvas").append("<button class=sg-code-toggle>Show Markup</button>");
         $(".sg-code-toggle").on("click", function() {
             var $code = $(this).parents(".sg-example").first().find(".sg-code").first();
             if ($code.length) {
