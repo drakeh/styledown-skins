@@ -73,7 +73,9 @@ h5.sg,
 h6.sg,
 p.sg,
 ol.sg,
-ul.sg .sg-title,
+ul.sg,
+a.sg,
+.sg-title,
 .sg-text,
 .sg-menu,
 .sg-code-toggle,
@@ -185,6 +187,7 @@ code.sg {
 }
 .tocify a {
   font-size: 14px !important;
+  font-weight: normal !important;
   color: #4183c4 !important;
   text-decoration: none !important;
 }
